@@ -26,8 +26,9 @@ export const FlipContainer: React.FC<
     width: number;
     front: React.ReactElement;
     back: React.ReactElement;
+    className?: string;
   }>
-> = ({ width, height, front, back }) => {
+> = ({ width, height, className, front, back }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
@@ -71,11 +72,10 @@ export const FlipContainer: React.FC<
     <motion.div
       onClick={handleClick}
       transition={spring}
+      className={className}
       style={{
         perspective: "1200px",
         transformStyle: "preserve-3d",
-        width: `${width}px`,
-        height: `${height}px`,
       }}
     >
       <motion.div
