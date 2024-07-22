@@ -23,22 +23,22 @@ export default function Home() {
                   About
                 </Link>
               </div>
-              <div className="col-span-7 row-span-3 row-start-4 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-3">
+              <div className="col-span-7 row-span-3 row-start-5 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-3">
                 <div className="text-[28px] leading-none whitespace-pre text-right mr-[18px]">{`Ppl is
 what
 they like_`}</div>
               </div>
-              <div className="col-span-7 row-start-8 md:col-span-3 md:col-start-5 md:row-start-3 flex flex-col relative">
+              <div className="col-span-7 row-start-9 md:col-span-3 md:col-start-5 md:row-start-3 flex flex-col relative">
                 <div className="text-[20px] leading-none">
                   Software Engineer
                 </div>
                 <div className="text-[16px] leading-none">(Frontend)</div>
               </div>
-              <div className="col-span-7 row-start-10 md:col-span-3 md:col-start-5 md:row-start-5">
+              <div className="col-span-7 row-start-11 md:col-span-3 md:col-start-5 md:row-start-5">
                 <div className="text-[13px] opacity-60 leading-none whitespace-pre">{`Placeholder
 for future improvement`}</div>
               </div>
-              <div className="col-span-7 row-start-2 md:col-span-4 md:col-start-1 md:row-start-6 flex flex-row justify-start items-end">
+              <div className="col-span-7 row-start-3 md:col-span-4 md:col-start-1 md:row-start-6 flex flex-row justify-start items-end">
                 <div className="text-[40px] leading-none whitespace-nowrap">
                   CHENG, KANG
                   <sup className="text-[0.4em] top-[-1.5em]">
