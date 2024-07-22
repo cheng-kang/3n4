@@ -1,5 +1,5 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
 import { FlipContainer } from "./components/FlipContainer";
 
 export default function Home() {
@@ -19,9 +19,13 @@ export default function Home() {
             />
             <div className="h-full grid gap-0 grid-cols-7 grid-rows-12 md:grid-rows-6 relative z-10">
               <div className="col-span-7 md:col-span-3 md:col-start-5 md:row-start-1 flex flex-row justify-end items-start">
-                <Link href="/about" className="underline">
+                <a
+                  onClick={(e) => e.stopPropagation()}
+                  href="/about"
+                  className="underline"
+                >
                   About
-                </Link>
+                </a>
               </div>
               <div className="col-span-7 row-span-3 row-start-5 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-3">
                 <div className="text-[28px] leading-none whitespace-pre text-right mr-[18px]">{`Ppl is
@@ -42,33 +46,43 @@ for future improvement`}</div>
                 <div className="text-[40px] leading-none whitespace-nowrap">
                   CHENG, KANG
                   <sup className="text-[0.4em] top-[-1.5em]">
-                    <Link
+                    <a
+                      onClick={(e) => e.stopPropagation()}
                       href="https://translate.google.com/?sl=auto&tl=en&text=%E7%A8%8B%E5%BA%B7&op=translate"
                       target="_blank"
                     >
                       [1]
-                    </Link>
+                    </a>
                   </sup>
                 </div>
               </div>
               <div className="col-span-7 row-start-12 md:col-span-3 md:col-start-5 md:row-start-6 flex flex-row justify-end items-end">
-                <Link href="https://github.com/cheng-kang" target="_blank">
+                <a
+                  onClick={(e) => e.stopPropagation()}
+                  href="https://github.com/cheng-kang"
+                  target="_blank"
+                >
                   <Image
                     src="/icons8-github.svg"
                     width={21}
                     height={21}
                     alt="CHENGKANG GitHub Link"
                   />
-                </Link>
-                <Link href="https://www.linkedin.com/in/3n4" target="_blank">
+                </a>
+                <a
+                  onClick={(e) => e.stopPropagation()}
+                  href="https://www.linkedin.com/in/3n4"
+                  target="_blank"
+                >
                   <Image
                     src="/icons8-linkedin.svg"
                     width={21}
                     height={21}
                     alt="CHENGKANG LinkedIn Link"
                   />
-                </Link>
-                <Link
+                </a>
+                <a
+                  onClick={(e) => e.stopPropagation()}
                   href="https://www.instagram.com/ch3ngk4ng"
                   target="_blank"
                 >
@@ -78,7 +92,7 @@ for future improvement`}</div>
                     height={21}
                     alt="CHENGKANG Instagram Link"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </section>
