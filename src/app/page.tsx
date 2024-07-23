@@ -4,7 +4,7 @@ import { FlipContainer } from "./components/FlipContainer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-row items-center justify-center md:p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center space-y-16 md:p-24">
       <FlipContainer
         width={596}
         height={368}
@@ -20,8 +20,12 @@ export default function Home() {
             <div className="h-full grid gap-0 grid-cols-7 grid-rows-12 md:grid-rows-6 relative z-10">
               <div className="col-span-7 md:col-span-3 md:col-start-5 md:row-start-1 flex flex-row justify-end items-start">
                 <a
-                  onClick={(e) => e.stopPropagation()}
-                  href="/about"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  target="_blank"
+                  href="https://chengkang.me/about"
                   className="underline"
                 >
                   About
@@ -47,7 +51,10 @@ for future improvement`}</div>
                   CHENG, KANG
                   <sup className="text-[0.4em] top-[-1.5em]">
                     <a
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.nativeEvent.stopImmediatePropagation();
+                      }}
                       href="https://translate.google.com/?sl=auto&tl=en&text=%E7%A8%8B%E5%BA%B7&op=translate"
                       target="_blank"
                     >
@@ -56,40 +63,49 @@ for future improvement`}</div>
                   </sup>
                 </div>
               </div>
-              <div className="col-span-7 row-start-12 md:col-span-3 md:col-start-5 md:row-start-6 flex flex-row justify-end items-end">
+              <div className="col-span-7 row-start-12 md:col-span-3 md:col-start-5 md:row-start-6 flex flex-row justify-end items-end space-x-1">
                 <a
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
                   href="https://github.com/cheng-kang"
                   target="_blank"
                 >
                   <Image
                     src="/icons8-github.svg"
-                    width={21}
-                    height={21}
+                    width={28}
+                    height={28}
                     alt="CHENGKANG GitHub Link"
                   />
                 </a>
                 <a
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
                   href="https://www.linkedin.com/in/3n4"
                   target="_blank"
                 >
                   <Image
                     src="/icons8-linkedin.svg"
-                    width={21}
-                    height={21}
+                    width={28}
+                    height={28}
                     alt="CHENGKANG LinkedIn Link"
                   />
                 </a>
                 <a
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
                   href="https://www.instagram.com/ch3ngk4ng"
                   target="_blank"
                 >
                   <Image
                     src="/icons8-instagram.svg"
-                    width={21}
-                    height={21}
+                    width={28}
+                    height={28}
                     alt="CHENGKANG Instagram Link"
                   />
                 </a>
@@ -105,12 +121,109 @@ for future improvement`}</div>
               fill
               className="absolute inset-0 opacity-50 z-0"
             />
-            <div className="h-full relative z-10 flex flex-row justify-center items-center">
+            {/* <div className="h-full relative z-10 flex flex-row justify-center items-center">
               Under construction...
+            </div> */}
+            {/* <div className="break-all">
+              CHENG, KANG aka 程康 aka 3n4 aka CHENGKANG aka Kang Cheng aka
+              i_am_cheng_kang aka 程河西 aka ch3ngk4ng aka
+              definitely_not_cheng_kang aka cheng-kang...
+            </div> */}
+            <div className="h-full flex flex-row justify-center items-center relative">
+              <div className="flex flex-row items-center space-x-4 opacity">
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  href="https://github.com/cheng-kang"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons8-github.svg"
+                    width={32}
+                    height={32}
+                    alt="CHENGKANG GitHub Link"
+                  />
+                </a>
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  href="https://www.linkedin.com/in/3n4"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons8-linkedin.svg"
+                    width={32}
+                    height={32}
+                    alt="CHENGKANG LinkedIn Link"
+                  />
+                </a>
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  href="https://twitter.com/i_am_cheng_kang"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons8-twitter.svg"
+                    width={32}
+                    height={32}
+                    alt="CHENGKANG Twitter Link"
+                  />
+                </a>
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  href="https://www.instagram.com/ch3ngk4ng"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons8-instagram.svg"
+                    width={32}
+                    height={32}
+                    alt="CHENGKANG Instagram Link"
+                  />
+                </a>
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    e.nativeEvent.stopImmediatePropagation();
+                  }}
+                  href="mailto:cantchengkang@gmail.com"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons8-email.svg"
+                    width={30}
+                    height={30}
+                    alt="CHENGKANG Email"
+                  />
+                </a>
+              </div>
             </div>
           </section>
         }
       />
+      {/* <div>
+        <div className="btn-96">
+          <span className="relative">
+            <Image
+              src="/white-paper-texture.jpg"
+              alt="card background"
+              fill
+              className="absolute inset-0 opacity-50 z-0"
+            />
+            <div className="z-10">Flip</div>
+          </span>
+        </div>
+      </div> */}
     </main>
   );
 }

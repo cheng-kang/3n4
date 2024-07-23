@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --background-rgb: 240, 238, 232;
   --card-rgb: 233, 227, 209;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -131,4 +131,114 @@ body {
     content: "developer";
     animation: sequencePopup 12s linear infinite;
   }
+}
+
+button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.btn-96,
+.btn-96 *,
+.btn-96 :after,
+.btn-96 :before,
+.btn-96:after,
+.btn-96:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-96 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-96:disabled {
+  cursor: default;
+}
+
+.btn-96:-moz-focusring {
+  outline: auto;
+}
+
+.btn-96 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-96 [hidden] {
+  display: none;
+}
+
+.btn-96 {
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  padding: 2rem 5rem;
+  perspective: 800px;
+  position: relative;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+.btn-96 span {
+  background-color: rgb(var(--background-rgb));
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transform: rotateX(35deg);
+  transform-origin: top center;
+  transition: 0.2s;
+}
+
+.btn-96:hover span {
+  transform: rotateX(25deg);
+}
+.btn-96:active span {
+  transform: rotateX(0deg);
+}
+
+.btn-96:after,
+.btn-96:before {
+  background: #ddd;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateX(0deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.btn-96:after {
+  background: #ccc;
+  width: 100%;
 }

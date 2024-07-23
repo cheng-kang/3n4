@@ -44,3 +44,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - https://flip.learnframer.site/
   - https://dropz.framer.website/
 - emoji cursor: https://www.emojicursor.app/
+- beautiful shadow: https://www.joshwcomeau.com/css/designing-shadows/
