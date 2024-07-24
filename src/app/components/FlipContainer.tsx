@@ -1,7 +1,8 @@
 "use client";
-import type { ComponentType, MouseEventHandler } from "react";
+import type { MouseEventHandler } from "react";
 import { motion, useSpring } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 
 // Learn more: https://www.framer.com/docs/guides/overrides/
 
@@ -22,13 +23,11 @@ const spring = {
 
 export const FlipContainer: React.FC<
   React.PropsWithChildren<{
-    height: number;
-    width: number;
     front: React.ReactElement;
     back: React.ReactElement;
     className?: string;
   }>
-> = ({ width, height, className, front, back }) => {
+> = ({ className, front, back }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
@@ -66,6 +65,7 @@ export const FlipContainer: React.FC<
   useEffect(() => {
     dx.set(-rotateXaxis);
     dy.set(rotateYaxis);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rotateXaxis, rotateYaxis]);
 
   return (
@@ -80,10 +80,10 @@ export const FlipContainer: React.FC<
     >
       <motion.div
         ref={ref}
-        whileHover={{ scale: 1.1 }} //Change the scale of zooming in when hovering
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseEnd}
-        transition={spring}
+        whileHover={isMobile ? undefined : { scale: 1.1 }} //Change the scale of zooming in when hovering
+        onMouseMove={isMobile ? undefined : handleMouseMove}
+        onMouseLeave={isMobile ? undefined : handleMouseEnd}
+        transition={isMobile ? undefined : spring}
         style={{
           width: "100%",
           height: "100%",
