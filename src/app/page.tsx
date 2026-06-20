@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { FlipContainer } from "./components/FlipContainer";
 import BusinessCardFront from "./components/BusinessCardFront";
 import BusinessCardBack from "./components/BusinessCardBack";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center md:p-24">
+    <main className="h-dvh w-screen overflow-hidden">
       <FlipContainer
         className="w-[368px] h-[596px] md:w-[596px] md:h-[368px]"
         front={<BusinessCardFront />}

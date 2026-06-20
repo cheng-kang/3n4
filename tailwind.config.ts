@@ -8,15 +8,15 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      card: "var(--card-rgb)",
-      foreground: "var(--foreground-rgb)",
-      background: "var(--background-rgb)",
+      card: "rgb(var(--card-rgb))",
+      foreground: "rgb(var(--foreground-rgb))",
+      background: "rgb(var(--background-rgb))",
     },
     extend: {
       colors: {
-        card: "var(--card-rgb)",
-        foreground: "var(--foreground-rgb)",
-        background: "var(--background-rgb)",
+        card: "rgb(var(--card-rgb))",
+        foreground: "rgb(var(--foreground-rgb))",
+        background: "rgb(var(--background-rgb))",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -8,6 +8,8 @@ const BusinessCardBack: React.FC = () => {
         src="/white-paper-texture.jpg"
         alt="card background"
         fill
+        priority
+        sizes="(min-width: 768px) 596px, 368px"
         className="absolute inset-0 opacity-50 z-0"
       />
       {/* <div className="h-full relative z-10 flex flex-row justify-center items-center">
@@ -20,13 +22,7 @@ const BusinessCardBack: React.FC = () => {
     </div> */}
       <div className="h-full flex flex-row justify-center items-center relative">
         <div className="flex flex-row items-center space-x-4 opacity">
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href="https://github.com/cheng-kang"
-            target="_blank"
-          >
+          <a href="https://github.com/cheng-kang" target="_blank">
             <Image
               src="/icons8-github.svg"
               width={32}
@@ -34,13 +30,7 @@ const BusinessCardBack: React.FC = () => {
               alt="CHENGKANG GitHub Link"
             />
           </a>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href="https://www.linkedin.com/in/3n4"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/3n4" target="_blank">
             <Image
               src="/icons8-linkedin.svg"
               width={32}
@@ -48,13 +38,7 @@ const BusinessCardBack: React.FC = () => {
               alt="CHENGKANG LinkedIn Link"
             />
           </a>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href="https://twitter.com/i_am_cheng_kang"
-            target="_blank"
-          >
+          <a href="https://twitter.com/i_am_cheng_kang" target="_blank">
             <Image
               src="/icons8-twitter.svg"
               width={32}
@@ -62,13 +46,7 @@ const BusinessCardBack: React.FC = () => {
               alt="CHENGKANG Twitter Link"
             />
           </a>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href="https://www.instagram.com/ch3ngk4ng"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/ch3ngk4ng" target="_blank">
             <Image
               src="/icons8-instagram.svg"
               width={32}
@@ -76,13 +54,7 @@ const BusinessCardBack: React.FC = () => {
               alt="CHENGKANG Instagram Link"
             />
           </a>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href="mailto:cantchengkang@gmail.com"
-            target="_blank"
-          >
+          <a href="mailto:cantchengkang@gmail.com" target="_blank">
             <Image
               src="/icons8-email.svg"
               width={30}
